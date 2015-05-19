@@ -7,7 +7,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,16 @@ class ViewController: UIViewController, UIPickerViewDataSource {
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 10
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int,
+        forComponent component: Int) -> String! {
+        return "N°C"
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int,
+        inComponent component: Int) {
+        // convert and display temperature
     }
 
 }
