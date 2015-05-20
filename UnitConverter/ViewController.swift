@@ -11,10 +11,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet var temperatureRange: TemperatureRange!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var celsiusPicker: UIPickerView!
     private let converter = UnitConverter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaultPickerRow = celsiusPicker.numberOfRowsInComponent(0) / 2
+        celsiusPicker.selectRow(defaultPickerRow, inComponent: 0, animated: false)
+        pickerView(celsiusPicker, didSelectRow: defaultPickerRow, inComponent: 0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -39,6 +39,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="celsiusPicker" destination="KQ0-0r-Uda" id="fon-tk-TOp"/>
                         <outlet property="temperatureLabel" destination="zM1-6C-M0z" id="eVT-We-sSe"/>
                         <outlet property="temperatureRange" destination="VkO-gz-Wiy" id="1K2-GK-FKj"/>
                     </connections>
