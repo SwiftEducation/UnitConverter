@@ -38,6 +38,9 @@
                             <constraint firstAttribute="centerX" secondItem="zM1-6C-M0z" secondAttribute="centerX" id="YE2-MS-peB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="zM1-6C-M0z" id="eVT-We-sSe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
