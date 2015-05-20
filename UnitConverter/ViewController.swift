@@ -7,10 +7,10 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate {
 
+    @IBOutlet var temperatureRange: TemperatureRange!
     @IBOutlet weak var temperatureLabel: UILabel!
-    private let temperatureValues = (-100...100).map { $0 }
     private let converter = UnitConverter()
     
     override func viewDidLoad() {
@@ -22,22 +22,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return temperatureValues.count
-    }
-    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        let celsiusValue = temperatureValues[row]
+        let celsiusValue = temperatureRange.values[row]
         return "\(celsiusValue)°C"
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int,
         inComponent component: Int) {
-        let degreesCelsius = temperatureValues[row]
+        let degreesCelsius = temperatureRange.values[row]
         temperatureLabel.text = "\(converter.degreesFahrenheit(degreesCelsius))°F"
     }
 

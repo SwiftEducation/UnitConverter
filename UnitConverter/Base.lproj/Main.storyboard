@@ -40,6 +40,7 @@
                     </view>
                     <connections>
                         <outlet property="temperatureLabel" destination="zM1-6C-M0z" id="eVT-We-sSe"/>
+                        <outlet property="temperatureRange" destination="VkO-gz-Wiy" id="1K2-GK-FKj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
