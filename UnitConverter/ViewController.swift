@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    private let temperatureValues = (-100...100).map { $0 }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +25,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 10
+        return temperatureValues.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int,
-        forComponent component: Int) -> String! {
-        return "N°C"
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        let celsiusValue = temperatureValues[row]
+        return "\(celsiusValue)°C"
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int,
