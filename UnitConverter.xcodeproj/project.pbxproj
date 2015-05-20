@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F9207F501B0C9C1200418CBC /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9207F4F1B0C9C1200418CBC /* UnitConverter.swift */; };
+		F9207F521B0CA6F500418CBC /* TemperatureRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9207F511B0CA6F500418CBC /* TemperatureRange.swift */; };
 		F96E6C991B0698880088267A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E6C981B0698880088267A /* AppDelegate.swift */; };
 		F96E6C9B1B0698880088267A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E6C9A1B0698880088267A /* ViewController.swift */; };
 		F96E6C9E1B0698880088267A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96E6C9C1B0698880088267A /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		F9207F4F1B0C9C1200418CBC /* UnitConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
+		F9207F511B0CA6F500418CBC /* TemperatureRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureRange.swift; sourceTree = "<group>"; };
 		F96E6C931B0698880088267A /* UnitConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96E6C971B0698880088267A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96E6C981B0698880088267A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				F96E6C981B0698880088267A /* AppDelegate.swift */,
 				F96E6C9A1B0698880088267A /* ViewController.swift */,
 				F96E6C9C1B0698880088267A /* Main.storyboard */,
+				F9207F511B0CA6F500418CBC /* TemperatureRange.swift */,
 				F9207F4F1B0C9C1200418CBC /* UnitConverter.swift */,
 				F96E6C9F1B0698880088267A /* Images.xcassets */,
 				F96E6CA11B0698880088267A /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9207F521B0CA6F500418CBC /* TemperatureRange.swift in Sources */,
 				F9207F501B0C9C1200418CBC /* UnitConverter.swift in Sources */,
 				F96E6C9B1B0698880088267A /* ViewController.swift in Sources */,
 				F96E6C991B0698880088267A /* AppDelegate.swift in Sources */,

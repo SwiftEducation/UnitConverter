@@ -25,7 +25,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ0-0r-Uda">
                                 <rect key="frame" x="140" y="430" width="320" height="162"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JU9-Ur-BCh"/>
+                                    <outlet property="dataSource" destination="VkO-gz-Wiy" id="U7w-6Y-bXY"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="j7K-Xx-q5T"/>
                                 </connections>
                             </pickerView>
@@ -43,6 +43,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="VkO-gz-Wiy" userLabel="TemperatureRange" customClass="TemperatureRange" customModule="UnitConverter" customModuleProvider="target"/>
             </objects>
         </scene>
     </scenes>
