@@ -19,11 +19,20 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaultPickerRow = celsiusPicker.numberOfRowsInComponent(0) / 2
-        celsiusPicker.selectRow(defaultPickerRow, inComponent: 0, animated: false)
-        pickerView(celsiusPicker, didSelectRow: defaultPickerRow, inComponent: 0)
+        let row = initialPickerRow()
+        celsiusPicker.selectRow(row, inComponent: 0, animated: false)
+        pickerView(celsiusPicker, didSelectRow: row, inComponent: 0)
     }
 
+    func initialPickerRow() -> Int {
+        let savedRow = NSUserDefaults.standardUserDefaults().objectForKey(userDefaultsLastRowKey) as? Int
+        if let row = savedRow  {
+            return row
+        } else {
+            return celsiusPicker.numberOfRowsInComponent(0) / 2
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
