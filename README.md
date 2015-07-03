@@ -1,4 +1,4 @@
-<img align="right" src="https://raw.github.com/SwiftEducation/UnitConverter/master/UnitConverter/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-40@2x.png" />
+<img align="right" src="https://github.com/SwiftEducation/UnitConverter/raw/master/UnitConverter/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-40@2x.png" />
 
 # UnitConverter
 
@@ -8,7 +8,7 @@ Teach students about delegates, delegation and protocols through the creation of
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
