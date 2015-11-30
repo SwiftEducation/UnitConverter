@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int,
-        forComponent component: Int) -> String! {
+        forComponent component: Int) -> String? {
         return "N°C"
     }
     
