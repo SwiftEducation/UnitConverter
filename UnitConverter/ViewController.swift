@@ -22,12 +22,12 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let celsiusValue = temperatureRange.values[row]
         return "\(celsiusValue)°C"
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int,
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,
         inComponent component: Int) {
         let degreesCelsius = temperatureRange.values[row]
         temperatureLabel.text = "\(converter.degreesFahrenheit(degreesCelsius))°F"
