@@ -19,23 +19,24 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 10
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int,
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int,
         forComponent component: Int) -> String? {
         return "N°C"
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int,
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,
         inComponent component: Int) {
         // convert and display temperature
     }
 
 }
+
 
