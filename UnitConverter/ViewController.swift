@@ -19,11 +19,11 @@ class ViewController: UIViewController, UIPickerViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 10
     }
 
