@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var celsiusPicker: UIPickerView!
     
-    private let converter = UnitConverter()
+    fileprivate let converter = UnitConverter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
 
     func initialPickerRow() -> Int {
-        let savedRow = NSUserDefaults.standardUserDefaults().objectForKey(userDefaultsLastRowKey) as? Int
+        let savedRow = UserDefaults.standard.object(forKey: userDefaultsLastRowKey) as? Int
         if let row = savedRow  {
             return row
         } else {
-            return celsiusPicker.numberOfRowsInComponent(0) / 2
+            return celsiusPicker.numberOfRows(inComponent: 0) / 2
         }
     }
     
@@ -38,25 +38,25 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let celsiusValue = temperatureRange.values[row]
         return "\(celsiusValue)°C"
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int,
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,
         inComponent component: Int) {
         displayConvertedTemperatureForRow(row)
         saveSelectedRow(row)
     }
     
-    func displayConvertedTemperatureForRow(row: Int) {
+    func displayConvertedTemperatureForRow(_ row: Int) {
         let degreesCelsius = temperatureRange.values[row]
         temperatureLabel.text = "\(converter.degreesFahrenheit(degreesCelsius))°F"
     }
 
-    func saveSelectedRow(row: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(row, forKey: userDefaultsLastRowKey)
+    func saveSelectedRow(_ row: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(row, forKey: userDefaultsLastRowKey)
         defaults.synchronize()
     }
     
